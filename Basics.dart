@@ -19,3 +19,33 @@
 // UI components and logic both are in single Language DART unlike other platforms 
 
 // create a flutter project - flutter create appName 
+
+// .idea - it contains our code editor project related setting specific files
+// android - contains android platform specific settings, code and resources,
+// if we need any platform specific changes, we need to change the code here 
+
+// build - contains the output generated when you build or run the project
+// all release related file/folders like apk 
+
+// ios 
+// lib - main folder where we  will write all the flutter app related codes 
+// main.dart is entry point for the flutter app 
+
+// test - it is set to contain any tetsing related codes that you write
+// like test/testcases code 
+
+// .gitignore - git specific file (include/exclude any file/folders as you need)
+
+// .metadata - Flutter project related metadata that flutter tool uses
+// not make any manual changes in it 
+
+// .packages - conatins many libaries and packages, some packages are preinstalled with flutter
+// while others are downloaded during development 
+// it holds the path to each of the library/packages in local system 
+
+// pubspec.lock - dependent on pubspec.yaml file 
+// helper file created next to pubspec.yaml
+
+// pubspec.yaml - contains flutter app specific metadata and configurations
+// external packages, image assets,font files, app versions etc.
+
