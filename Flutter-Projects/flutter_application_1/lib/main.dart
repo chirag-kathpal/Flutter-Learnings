@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Center(child: Text('This is a center container',style: TextStyle(
           color: Colors.white,
           fontSize: 15,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.bold,    
           ),)),
       ) ,
       ) 
