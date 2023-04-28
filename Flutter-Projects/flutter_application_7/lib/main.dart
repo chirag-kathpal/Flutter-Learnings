@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body:  
+      body: const Text("hello",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.red),) 
           );
   }
 }
