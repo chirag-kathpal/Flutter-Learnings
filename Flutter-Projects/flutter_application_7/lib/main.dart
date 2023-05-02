@@ -33,7 +33,32 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Text("hello",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.red),) 
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.green,
+        child: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(
+                width: 2,
+                color: Colors.black,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 11,
+                  spreadRadius: 4,
+                )
+              ],
+              // shape: BoxShape.circle
+            ),
+          ),
+        ),
+      )
           );
   }
 }
