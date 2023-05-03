@@ -62,8 +62,29 @@
 // Leading, title and subtitle, trailing 
 
 // flutter_application_12 ( ws-cube 44)
-// Circle avatar widget - simply a circle in which we can add bg-color, bg-image or just text
+// CircleAvatar widget - simply a circle in which we can add bg-color, bg-image or just text
 // usually represents a user with his image or with his initials
 
 // -------------------------------------------------------------------------3/05/2023
-// flutter_application_13
+// flutter_application_13 (ws-cube 45)
+// Custom font over text 
+
+// flutter_application_13 (ws-cube 46)
+// Flutter Styles and Themes
+
+// flutter_application_14 (ws-cube 47)
+// Card Widget- to enhancing UI
+
+// flutter_application_14 (ws-cube 49)
+// Get current date and time 
+// DateTime.now()
+
+// flutter_application_14 (ws-cube 50)
+// DateFormat widget
+
+// flutter_application_15 (ws-cube 51)
+// Date Picker 
+// showdatepicker, showtimepicker 
+
+// ----------------------------------------------------------------------------4/05/2023 
+// flutter_application_15 (ws-cube )
