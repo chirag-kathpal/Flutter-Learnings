@@ -31,11 +31,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrColors = [
+      Colors.red,
+      Colors.green,
+      Colors.redAccent,
+      Colors.blueGrey,
+      Colors.limeAccent,
+      Colors.pink,
+      Colors.brown,
+    ];
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
+        body: /*Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -55,9 +64,35 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text('Show'))
             ],
           ),
-        )
+        )*/
 
+            /*Container(
+              width: 200,
+              child: GridView.count(crossAxisCount: 3, /*crossAxisSpacing: 11,*/ /*mainAxisSpacing: 11,*/
+              children: [
+                Container(color: Colors.red,margin: EdgeInsets.all(5),),
+                Container(color: Colors.green,margin: EdgeInsets.all(5),),
+                Container(color: Colors.amber,margin: EdgeInsets.all(5),),
+                Container(color: Colors.black,margin: EdgeInsets.all(5),),
+                Container(color: Colors.blueAccent,margin: EdgeInsets.all(5),),
+                Container(color: Colors.grey,margin: EdgeInsets.all(5),),
+                Container(color: Colors.deepPurple,margin: EdgeInsets.all(5),),
+              ],
+              ),
+            )*/
 
-        );
+            GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 11,
+            mainAxisSpacing: 11
+          ),
+          itemBuilder: (context, index) {
+            return Container(
+              color: arrColors[index],
+            );
+          },
+          itemCount: arrColors.length,
+        ));
   }
 }
