@@ -6,7 +6,7 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Intro'),
+        title: const Text('Intro'),
       ),
       body: Center(
         child: Column(
@@ -23,7 +23,7 @@ class IntroScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return MyHomePage(title: 'Switching');
+                      return const MyHomePage(title: 'Switching');
                     },
                   ));
                 },
