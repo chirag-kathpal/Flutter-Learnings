@@ -19,9 +19,14 @@ class MyApp extends StatelessWidget {
       // themeMode: ThemeMode.light,
       // darkTheme: ThemeData(brightness: Brightness.dark),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        // fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+          )
+          // fontFamily: GoogleFonts.lato().fontFamily,
+          ),
       initialRoute: MyRoutes.homeRoute,
       routes: {
         // "/": (context) => MyHomePage(),
