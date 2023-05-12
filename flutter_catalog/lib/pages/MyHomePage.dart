@@ -50,11 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 itemCount: CatalogModels.items!.length,
               )
-            : Center(
+            : const Center(
                 child: CircularProgressIndicator(),
               ),
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }

@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      // themeMode: ThemeMode.light,
-      // darkTheme: ThemeData(brightness: Brightness.dark),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(brightness: Brightness.dark),
       theme: ThemeData(
           primarySwatch: Colors.blue,
           appBarTheme: const AppBarTheme(
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           )
           // fontFamily: GoogleFonts.lato().fontFamily,
           ),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         // "/": (context) => MyHomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
