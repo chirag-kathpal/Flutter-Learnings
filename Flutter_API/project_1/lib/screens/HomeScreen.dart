@@ -1,7 +1,9 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+
+import 'package:project_1/model/models.dart';
+
+import '../services/user_api.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,7 +13,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<dynamic> users = [];
+  // List<dynamic> users = [];
+  List<User> users = [];
+
+  // API call without floating action button
+  @override
+  void initState() {
+    super.initState();
+    fetchUsers();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +29,24 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Rest Api Call'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: fetchUsers,
-        child: const Icon(Icons.refresh),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: fetchUsers,
+      //   child: const Icon(Icons.refresh),
+      // ),
       body: ListView.builder(
         itemBuilder: (context, index) {
           final user = users[index];
-          final email = user['email'];
-          final name = user['name']['first'];
+          // final email = user['email'];
+          final email = user.email;
+          // final name = user['name']['first'];
+          final color =
+              user.gender == 'male' ? Colors.blue : Colors.pink.shade300;
           return ListTile(
             leading: CircleAvatar(child: Text('${index + 1}')),
-            title: Text(email),
+            // title: Text(email),
+            title: Text(user.fullName),
+            subtitle: Text(user.cell),
+            tileColor: color,
           );
         },
         itemCount: users.length,
@@ -38,15 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void fetchUsers() async {
-    print('fetch Users');
-    const url = 'https://randomuser.me/api/?results=10';
-    final uri = Uri.parse(url);
-    final response = await http.get(uri);
-    final body = response.body;
-    final json = jsonDecode(body);
-    users = json['results'];
+  Future<void> fetchUsers() async {
+    final response = await FetchUserApi.fetchUsers();
+    users = response;
     setState(() {});
-    print('Fetch users completed');
   }
 }
