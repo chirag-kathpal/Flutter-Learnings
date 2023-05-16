@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
-
 import 'package:project_1/model/models.dart';
 
 import '../services/user_api.dart';
