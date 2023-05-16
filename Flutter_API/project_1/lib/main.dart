@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/dio_api/dio.dart';
 import 'package:project_1/screens/HomeScreen.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
+      // home: dio(),
     );
   }
 }

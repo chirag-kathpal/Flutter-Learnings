@@ -8,9 +8,12 @@ class FetchUserApi {
     // print('fetch Users');
     const url = 'https://randomuser.me/api/?results=20';
     final uri = Uri.parse(url);
-    final response = await http.get(uri);
+    final response = await http.get(uri);   //final - http.Response
     final body = response.body;
     final json = jsonDecode(body);
+
+    // for http.post(uri) - jsonEncode
+
     final results = json['results'] as List<dynamic>;
 
     final users = results.map((e) {
