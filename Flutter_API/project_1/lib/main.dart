@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/dio_api/dio.dart';
 import 'package:project_1/screens/HomeScreen.dart';
 
 void main() {

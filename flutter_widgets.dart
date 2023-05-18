@@ -86,5 +86,60 @@
 // Date Picker 
 // showdatepicker, showtimepicker 
 
-// ----------------------------------------------------------------------------4/05/2023 
-// flutter_application_15 (ws-cube )
+// ----------------------------------------------------------------------------4/05/2023  
+// flutter_application_15 (ws-cube 52)
+// GridView widget- Grid layout 
+// GridView.count- division based on count and GridView.extent-  division based on size
+// GridView.builder - for repetition of design 
+
+// flutter_application_16 (ws-cube 53) 
+// CallBack function 
+
+// flutter_application_17 (ws-cube 63)
+// StateLess and Stateful widgets 
+
+// -----------------------------------------------------------------------------5/05/2023
+// flutter_application_17(ws-cube 64)
+// Updating correctly with stateful widgets - calculator app
+
+// flutter_application_18 (ws-cube 65)
+// Flutter constraint Box
+
+// flutter_application_18 (ws-cube 66)
+// Switching one screen to another screen
+// Navigator.push(context,route)
+
+// flutter_application_18 (ws-cube 67)
+// Creating a splash Screen 
+// navigator.pushReplacement 
+
+// --------------------------------------------------------------------------------8/05/2023
+// Passing data from 1 to other screen 
+// Just make a constructor and pass data from one class to another class
+
+// flutter_application_19 (ws-cube 69)
+// Adding a flutter range slider 
+
+// flutter_application_20 (ws-cube 70)
+// Project - BMI Calculator 
+// https://drive.google.com/file/d/1HoE7cZM3KcFuqpYkK9Ga1zuU40zaFDqB/view?usp=sharing
+
+// flutter_application_21 (ws-cube 71)
+// Animate Containers - FOO animations
+// animatedContainer()
+
+// flutter_application_22 (ws-cube 72)
+// Animated Opacity widget
+
+// -----------------------------------------------------------------------------------9/05/2023
+
+// flutter_application_23 - wscube-tech (81)- How to store and retreive data using shared preferences
+// Shared  Preferences - To store Persistent(User specific and smaller) data Locally in the app
+
+// If data is larger or multiLingual then we will use any database and then can run the query to fetch the 
+// required data 
+// we can skip login screen using shared preference 
+
+// -----------------------------------------------------------------------------------10/05/2023
+
+ 
