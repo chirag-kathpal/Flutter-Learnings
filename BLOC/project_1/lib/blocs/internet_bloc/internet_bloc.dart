@@ -22,6 +22,7 @@ class InternetBloc extends Bloc<InternetEvent, InternetState> {
       if (result == ConnectivityResult.mobile ||
           result == ConnectivityResult.wifi) {
         add(InternetGainedEvent());
+        /*add means- this event is added to bloc*/
       } else {
         add(InternetLostEvent());
       }
