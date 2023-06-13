@@ -29,10 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
       listener: (context, state) {
         if (state is HomeNavigateToCartPageActionState) {
           Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => Cart())));
+              context, MaterialPageRoute(builder: ((context) => const Cart())));
         } else if (state is HomeNavigateToWishlistPageActionState) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => WishList())));
+          Navigator.push(context,
+              MaterialPageRoute(builder: ((context) => const WishList())));
         } else if (state is HomeProductItemCartedActionState) {
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text('Item Carted'),
