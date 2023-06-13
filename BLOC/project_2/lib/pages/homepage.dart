@@ -33,6 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
         } else if (state is HomeNavigateToWishlistPageActionState) {
           Navigator.push(
               context, MaterialPageRoute(builder: ((context) => WishList())));
+        } else if (state is HomeProductItemCartedActionState) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text('Item Carted'),
+          ));
+        } else if (state is HomeProductItemWishlistedActionState) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text('Item Wishlisted'),
+          ));
         }
       },
       builder: (context, state) {
@@ -80,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             );
           default:
-            return SizedBox();
+            return const SizedBox();
         }
       },
     );

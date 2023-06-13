@@ -53,11 +53,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       HomeProductCartButtonClickedEvent event, Emitter<HomeState> emit) {
     print('Cart Product  Clicked');
     cartItems.add(event.clickedproducts);
+    emit(HomeProductItemCartedActionState());
   }
 
   FutureOr<void> homeProductWishlistButtonClickedEvent(
       HomeProductWishlistButtonClickedEvent event, Emitter<HomeState> emit) {
     print('Home product clicked');
     wishlistItem.add(event.clickedproducts);
+    emit(HomeProductItemWishlistedActionState());
   }
 }
