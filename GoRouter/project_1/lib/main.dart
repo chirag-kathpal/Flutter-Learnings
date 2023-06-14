@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/pages/homepage.dart';
+import 'package:project_1/project/routes/app_routes_config.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +10,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          color: Colors.transparent,
+        ),
       ),
-      home: const MyHomePage(),
+      routeInformationParser:
+          MyAppRouter.returnRouter(true).routeInformationParser,
+      routerDelegate: MyAppRouter.returnRouter(true).routerDelegate,
     );
   }
 }
