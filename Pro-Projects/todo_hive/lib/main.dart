@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'ToDo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.amberAccent),
           useMaterial3: true,
           appBarTheme: const AppBarTheme(
             centerTitle: true,
