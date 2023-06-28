@@ -1,3 +1,4 @@
+import 'package:coin_vault/features/homepage/home_page.dart';
 import 'package:coin_vault/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -26,9 +27,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Center(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 80),
             Container(
               width: 70,
               height: 70,
@@ -40,9 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 100),
             Container(
               width: double.infinity,
               margin: const EdgeInsets.symmetric(horizontal: 25),
@@ -149,17 +146,15 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 60),
             GestureDetector(
               onTap: () {
-                // Navigator.pushReplacement(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => HomePage(),
-                //   ),
-                // );
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Homepage(),
+                  ),
+                );
               },
               child: Container(
                 padding: const EdgeInsets.all(16),
@@ -181,6 +176,31 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Signup',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: black,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  Text(
+                    'Forgot Password',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: black,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
