@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:coin_vault/features/app_screens/daily_screen.dart';
+import 'package:coin_vault/features/app_screens/transaction_screen.dart';
 import 'package:coin_vault/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,7 @@ class _HomepageState extends State<Homepage> {
   int pageIndex = 0;
   List<Widget> pages = [
     DailyScreen(),
-    Container(),
-    Container(),
+    TransactionScreen(),
     Container(),
     Container(),
   ];
