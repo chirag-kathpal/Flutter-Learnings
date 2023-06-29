@@ -236,7 +236,8 @@ class _DailyScreenState extends State<DailyScreen> {
                     children: [
                       Expanded(
                         child: Container(
-                          margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+                          margin: const EdgeInsets.only(
+                              top: 20, left: 25, right: 25),
                           decoration: BoxDecoration(
                             color: white,
                             borderRadius: BorderRadius.circular(25),

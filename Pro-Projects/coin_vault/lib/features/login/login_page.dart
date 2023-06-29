@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget getBody() {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: SafeArea(
         child: Center(
