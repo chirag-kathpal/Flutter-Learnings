@@ -41,9 +41,9 @@ class AuthRepository {
       final user = await _googleSignIn.signIn();
       if (user != null) {
         final userAcc = UserModel(
-          name: user.displayName!,
+          name: user.displayName ?? '',
           email: user.email,
-          profilePic: user.photoUrl!,
+          profilePic: user.photoUrl ?? '',
           token: '',
           uid: '',
         );
@@ -86,7 +86,11 @@ class AuthRepository {
         });
         switch (res.statusCode) {
           case 200:
-            final newUser = UserModel.fromJson(jsonDecode(res.body)['user']);
+            final newUser = UserModel.fromJson(
+              jsonEncode(
+                jsonDecode(res.body)['user'],
+              ),
+            ).copyWith(token: token);
             error = ErrorModel(error: null, data: newUser);
             _localStorageRepository.setToken(newUser.token);
             break;
