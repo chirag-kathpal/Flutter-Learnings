@@ -23,11 +23,11 @@ class AuthRepository {
   final Client _client;
   final LocalStorageRepository _localStorageRepository;
 
-  AuthRepository(
-      {required GoogleSignIn googleSignIn,
-      required Client client,
-      required LocalStorageRepository localStorageRepository})
-      : _googleSignIn = googleSignIn,
+  AuthRepository({
+    required GoogleSignIn googleSignIn,
+    required Client client,
+    required LocalStorageRepository localStorageRepository,
+  })  : _googleSignIn = googleSignIn,
         _client = client,
         _localStorageRepository = localStorageRepository;
 
@@ -100,5 +100,10 @@ class AuthRepository {
       error = ErrorModel(error: e.toString(), data: null);
     }
     return error;
+  }
+
+  void signOut() async {
+    await _googleSignIn.signOut();
+    _localStorageRepository.setToken('');
   }
 }
