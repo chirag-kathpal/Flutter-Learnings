@@ -27,12 +27,6 @@ class DocumentRepository {
           'createdAt': DateTime.now().millisecondsSinceEpoch,
         }),
       );
-      switch (res.statusCode) {
-        case 200:
-          error = ErrorModel(error: null, data: newUser);
-          _localStorageRepository.setToken(newUser.token);
-          break;
-      }
     } catch (e) {
       error = ErrorModel(error: e.toString(), data: null);
     }
